@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrape Result</title>
+</head>
+<body>
+    <h1>Scrape Result</h1>
+    
+    <div>
+        <h2>Scraped Data:</h2>
+        <pre>{{ data }}</pre>
+    </div>
+
+    <div>
+        <h2>Options for Download:</h2>
+        <form action="{{ url_for('download') }}" method="post">
+            <input type="hidden" name="url" value="{{ request.form['url'] }}">
+            <label for="format">Select format:</label>
+            <select name="format" id="format">
+                <option value="word">Word</option>
+                <option value="excel">Excel</option>
+                <option value="csv">CSV</option>
+            </select>
+            <button type="submit">Download</button>
+        </form>
+    </div>
+</body>
+</html>

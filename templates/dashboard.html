@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <div class="card">
+        <div class="card-header">
+            <h1 class="mb-0">Dashboard</h1>
+        </div>
+        <div class="card-body">
+            <form id="scrape-form">
+                <div class="form-group">
+                    <label for="url-input">Enter URL:</label>
+                    <input type="text" class="form-control" id="url-input" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Scrape</button>
+            </form>
+            <div id="result-container" class="mt-4"></div>
+        </div>
+    </div>
+{% endblock %}

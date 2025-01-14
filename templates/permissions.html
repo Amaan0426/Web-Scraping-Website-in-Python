@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <div class="card">
+        <div class="card-header">
+            <h1 class="mb-0">Website Permissions</h1>
+        </div>
+        <div class="card-body">
+            <ul class="list-group">
+                {% for permission in permissions %}
+                    <li class="list-group-item">{{ permission.website }} - {{ permission.status }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endblock %}
